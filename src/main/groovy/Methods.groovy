@@ -17,6 +17,7 @@ class Methods {
         def numbers = sumAll(1, 2, 3, 4)
         println("Sum: " + numbers)
 
+        println("Factorial of 4 = " + factorial(4))
     }
 
     static def sayHello() {
@@ -43,5 +44,13 @@ class Methods {
         def sum = 0
         num.each { sum += it }
         return sum
+    }
+
+    static def factorial(num) {
+        if (num <= 1) {
+            return 1
+        } else {
+            return (num * factorial(num - 1))
+        }
     }
 }
